@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <h1>Create Log</h1>
+    </div>
+    <form>
+    <div>
+        <label>Log type</label>
+        <ul>
+            <li>Project <input  type="radio" name="logType" type=checkbox> </li>
+            <li>Sick leave <input  type="radio" name="logType" type=checkbox> </li>
+        </ul>
+    </div>
+    <div>
+        <label>Project</label>
+        <select>
+            <option> Djoser</option>
+            <option> solundo </option>
+            <option> FMTC </option>
+        </select>
+    </div>
+    <div>
+        <label>Type of work</label>
+        <ul>
+            <li>Linkbuilding<input type="radio" name="workType" type=checkbox ></li>
+            <li>Other<input type="radio" name="workType"  type=checkbox ></li>
+        </ul>
+    </div>
+    <div>
+        <label for="fromTime">From time</label>
+        <input id="fromTime" type="text" placeholder="0000-00-00 00:00">
+    </div>
+    <div>
+        <label for="toTime" >End time</label>
+        <input id="toTime" type="text" placeholder="0000-00-00 00:00">
+    </div>
+    <div>
+        <label>Task</label>
+        <select>
+        <option >Filter by task number or (part of) a task</option>
+        <option >No task</option>
+        <option >Task 1 </option>
+        <option >Task 2</option>
+        <option >Task 3 </option>
+        <option >TTask 5</option>
+        </select>
+    </div>
+    <div>
+        <label> Message</label>
+        <input  type="text" placeholder="What were you doing">
+    </div>
+    <div>
+        <button type ='submit'>Save & Close</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
