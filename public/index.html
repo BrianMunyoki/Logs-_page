@@ -10,7 +10,7 @@
     <div>
         <h1>Create Log</h1>
     </div>
-    <form>
+    <form id="logForm">
     <div>
         <label>Log type</label>
         <ul>
@@ -20,7 +20,7 @@
     </div>
     <div>
         <label>Project</label>
-        <select>
+        <select id="project">
             <option> Djoser</option>
             <option> solundo </option>
             <option> FMTC </option>
@@ -38,12 +38,12 @@
         <input id="fromTime" type="text" placeholder="0000-00-00 00:00">
     </div>
     <div>
-        <label for="toTime" >End time</label>
+        <label to="toTime" >End time</label>
         <input id="toTime" type="text" placeholder="0000-00-00 00:00">
     </div>
     <div>
         <label>Task</label>
-        <select>
+        <select id="task">
         <option >Filter by task number or (part of) a task</option>
         <option >No task</option>
         <option >Task 1 </option>
@@ -54,7 +54,7 @@
     </div>
     <div>
         <label> Message</label>
-        <input  type="text" placeholder="What were you doing">
+        <input id="message" type="text" placeholder="What were you doing">
     </div>
     <div>
         <button type ='submit'>Save & Close</button>

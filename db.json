@@ -1,20 +1,63 @@
 {
-"Logtype":[
-{
-"id":1,
-"project":"Djoser",
-"Type of work":"linkbuilding",
-"From time":"2025-09-01 08:00",
-"End time":"2025-09-01 08:00",
-"Task number":"Task 1",
-"Message":"Created backlinks"},
-{
-"id":2,
-"project":"Djoser",
-"Type of work":"Other",
-"From time":"2025-09-01 08:00",
-"End time":"2025-09-01 08:00",
-"Task number":"Task 1",
-"Message":"Created backlinks"}
-]
+  "Logtype": [
+    {
+      "id": "1",
+      "project": "Djoser",
+      "Type of work": "linkbuilding",
+      "From time": "2025-09-01 08:00",
+      "End time": "2025-09-01 08:00",
+      "Task number": "Task 1",
+      "Message": "Created backlinks"
+    },
+    {
+      "id": "2",
+      "project": "Djoser",
+      "Type of work": "Other",
+      "From time": "2025-09-01 08:00",
+      "End time": "2025-09-01 08:00",
+      "Task number": "Task 1",
+      "Message": "Created backlinks"
+    },
+    {
+      "project": "solundo",
+      "fromTime": "dfAFAFD",
+      "toTime": "daf",
+      "task": "No task",
+      "message": "dfadfs",
+      "id": "DaU0uJbHEwI"
+    },
+    {
+      "project": "solundo",
+      "fromTime": "dfAFAFD",
+      "toTime": "daf",
+      "task": "No task",
+      "message": "dfadfs",
+      "id": "77WIYOHvhQo"
+    },
+    {
+      "project": "solundo",
+      "fromTime": "dfAFAFD",
+      "toTime": "daf",
+      "task": "No task",
+      "message": "dfadfs",
+      "id": "LkJu2eSBXMM"
+    },
+    {
+      "project": "solundo",
+      "fromTime": "dfAFAFD",
+      "toTime": "daf",
+      "task": "No task",
+      "message": "dfadfs",
+      "id": "ML7irBA6WNA"
+    },
+    {
+      "project": "solundo",
+      "fromTime": "dfAFAFD",
+      "toTime": "daf",
+      "task": "No task",
+      "message": "dfadfs",
+      "id": "wiFSZzbkqrU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
