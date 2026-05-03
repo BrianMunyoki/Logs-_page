@@ -45,7 +45,14 @@ const filters=document.querySelector(".filters");
   .then(response => response.json())
   .then(data => {
     console.log(data);
+      const tbody=document.querySelector("#logsTable");
+      tbody.innerHTML = ""; //clearing the table. 
+      data.forEach(item=>{
+        
+      })
+      console.log(tbody)
   })
   .catch(error => {
     console.error(error);
   });
+
