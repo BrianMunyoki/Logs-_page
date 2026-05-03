@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log list</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <form class="filters">
+    <select name="client">
+      <option value="all" selected>Client: All</option>
+      <option value="client1">Client 1</option>
+      <option value="client2">Client 2</option>
+      <option value="client3">Client 3</option>
+    </select>
+
+    <input type="date" name="fromDate" aria-label="From date">
+    <input type="date" name="toDate" aria-label="To date">
+
+    <select name="mode">
+      <option value="table" selected>Mode: Table</option>
+      <option value="chart">Mode: Chart</option>
+    </select>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Startdate</th>
+        <th>Stopdate</th>
+        <th>Duration</th>
+        <th>Client</th>
+        <th>Project</th>
+        <th>Task</th>
+        <th>Log message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="7">No data available in table</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Totals per activity</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">No data available in table</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
