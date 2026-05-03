@@ -1,5 +1,6 @@
 const form =document.getElementById("logForm");
 
+if(form){
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
         const logType = document.querySelector('input[name="logType"]:checked')?.value;
@@ -37,3 +38,14 @@ form.addEventListener("submit", (e)=>{
         console.error(error);
     })
     })
+    }
+const filters=document.querySelector(".filters");
+
+  fetch("http://localhost:3000/Logtype")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
