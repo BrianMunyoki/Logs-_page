@@ -32,7 +32,7 @@ form.addEventListener("submit", (e)=>{
         return response.json();
     })
     .then(data=>{
-        (data);
+      console.log  (data);
     })
     .catch(error=>{
         console.error(error);
@@ -48,7 +48,14 @@ const filters=document.querySelector(".filters");
       const tbody=document.querySelector("#logsTable");
       tbody.innerHTML = ""; //clearing the table. 
       data.forEach(item=>{
-        
+        const tr=document.createElement("tr");
+        tr.innerHTML=`
+        <td>${item.project} </td>
+        <td>${item["From time"]}</td>
+        <td>${item.Message} </td>
+        <td>${item["task number"]}</td>
+        <td>${item.id}</td>
+        `
       })
       console.log(tbody)
   })
