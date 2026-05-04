@@ -44,7 +44,7 @@ const filters=document.querySelector(".filters");
   fetch("http://localhost:3000/Logtype")
   .then(response => response.json())
   .then(data => {
-    console.log(data);
+    console.log("data received", data);
       const tbody=document.querySelector("#logsTable");
       tbody.innerHTML = ""; //clearing the table. 
       data.forEach(item=>{
