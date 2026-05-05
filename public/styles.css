@@ -57,7 +57,7 @@ li {
 }
 
 button {
-    margin-left: 150px; 
+    margin-left:0px; 
     background: linear-gradient(to bottom, #fefefe, #d3d3d3);
     border: 1px solid #bbb;
     border-radius: 4px;
@@ -113,11 +113,13 @@ td {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  width: fit-content;
+  align-items: center;
 }
 
 .filters input,
 .filters select {
-  padding: 8px;
+  padding: 7px;
 }
 
 table {
@@ -131,6 +133,7 @@ td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
+  gap: 10px
 }
 
 

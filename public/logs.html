@@ -9,22 +9,34 @@
 <body>
 
   <form class="filters">
-    <select name="client">
+    <select name="client" id="project">
       <option value="all" selected>Project: All</option>
-      <option value="client1">Djoser</option>
-      <option value="client2">Solundo</option>
-      <option value="client3">FMTC</option>
+      <option value="Djoser">Djoser</option>
+      <option value="Solundo">Solundo</option>
+      <option value="FMTC">FMTC</option>
     </select>
 
-    <input type="date" name="fromDate" aria-label="From date">
-    <input type="date" name="toDate" aria-label="To date">
+    <input type="date" name="fromDate" aria-label="From date" id="fromTime">
+    <input type="date" name="toDate" aria-label="To date" id="toTime">
 
     <select name="mode">
       <option value="table" selected>Mode: Table</option>
       <option value="chart">Mode: Chart</option>
     </select>
+    <button type="button" id="filterButton">Filter</button>
   </form>
+ <h2>Totals per activity</h2>
 
+  <table>
+    <thead>
+      <tr>
+        <th >Project</th>
+        <th>From Time</th>
+        <th>To Time</th>
+        <th>Task name</th>
+        <th>task id</th>
+      </tr>
+    </thead>
   <table id="logsTable">
     <thead>
       <tr>
@@ -37,27 +49,6 @@
         <th>Log message</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td colspan="7">No data available in table</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>Totals per activity</h2>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Item</th>
-        <th>Duration</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td colspan="2">No data available in table</td>
-      </tr>
-    </tbody>
   </table>
 <script src="index.js"></script>
 </body>
