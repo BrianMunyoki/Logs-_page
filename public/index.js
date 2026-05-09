@@ -33,6 +33,7 @@ form.addEventListener("submit", (e)=>{
     })
     .then(data=>{
       console.log  (data);
+      form.reset();
     })
     .catch(error=>{
         console.error(error);
@@ -44,10 +45,10 @@ const filterButton=document.querySelector("#filterButton");
 
 filterButton.addEventListener("click",()=>{
   const project=document.querySelector("#project").value;
-  const fromtime=document.querySelector("#fromTime").value;
-  const totime=document.querySelector("#toTime").value;
+  const fromTime=document.querySelector("#fromTime").value;
+  const toTime=document.querySelector("#toTime").value;
 
-console.log(project, fromtime, toTime);
+console.log(project, fromTime,toTime);
 
   fetch("http://localhost:3000/Logtype")
   .then(response => response.json())
@@ -55,15 +56,18 @@ console.log(project, fromtime, toTime);
     console.log("data received", data);
     const filtered=data.filter(item=>item.project===project);
       const tbody=document.querySelector("#logsTable");
+      const deleteButton=document.createElement("BUTTON");
+      deleteButton.textContent="Delete";
       tbody.innerHTML = ""; //clearing the table. 
       filtered.forEach(item=>{
         const tr=document.createElement("tr");
         tr.innerHTML=`
         <td>${item.project} </td>
-        <td>${item.fromtime}</td>
-        <td>${item.toTime}</td>
+        <td>${item.fromTime.replace("T"," ")}</td>
+        <td>${item.toTime.replace("T"," ")}</td>
         <td>${item.message} </td>
         <td>${item.id}</td>
+        <td></td>
         `
         tbody.appendChild(tr);
       })
