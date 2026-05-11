@@ -42,25 +42,39 @@ form.addEventListener("submit", (e)=>{
     }
 
 const filterButton=document.querySelector("#filterButton");
-
+const tbody=document.querySelector("#logsTable");
+const tr=document.createElement("tr");
 filterButton.addEventListener("click",()=>{
   const project=document.querySelector("#project").value;
   const fromTime=document.querySelector("#fromTime").value;
   const toTime=document.querySelector("#toTime").value;
 
 console.log(project, fromTime,toTime);
-
   fetch("http://localhost:3000/Logtype")
   .then(response => response.json())
   .then(data => {
     console.log("data received", data);
+    if(project==="all"){
+      tbody.innerHTML = ""; //clearing the table. 
+      item.forEach(
+      tr.innerHTML=`
+      <td>${item.project} </td>
+        <td>${item.fromTime.replace("T"," ")}</td>
+        <td>${item.toTime.replace("T"," ")}</td>
+        <td>${item.message}</td>
+        <td>${item.id}</td>
+        <td></td>
+      `
+      )
+      tbody.appendChild(tr);
+    } else{}
     const filtered=data.filter(item=>item.project===project);
-      const tbody=document.querySelector("#logsTable");
+      
       const deleteButton=document.createElement("BUTTON");
       deleteButton.textContent="Delete";
       tbody.innerHTML = ""; //clearing the table. 
       filtered.forEach(item=>{
-        const tr=document.createElement("tr");
+        
         tr.innerHTML=`
         <td>${item.project} </td>
         <td>${item.fromTime.replace("T"," ")}</td>
